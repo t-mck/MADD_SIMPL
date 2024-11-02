@@ -1,0 +1,42 @@
+SIMPL_script makes an instance of
+    |
+    V
+  SIMPL_Image
+    |
+    |-> Builds the the the scene.cej, rule.cga, and script.py files so that they match exactly (this prevents tedious
+    |   and very time consuming run time issues that occur when the user changes one file but not the others)
+    |
+    |- has a -> SIMPL_Scene (manages the scene.cej and rule.cga files)
+    |               |
+    |               |- builds a -> scene.cej file
+    |               |                   |
+    |               |                   |- adds a -> shapelayer to the scene.cej
+    |               |                                   |
+    |               |                                   |- adds a -> shape to the shapelayer
+    |               |                                                 ^ |
+    |               |                                                 | |- adds a -> Map, e.g. image (.jpg, etc), to the
+    |               |                                                 | |   shape, which is terrain in the output image
+    |               |                                                 | |
+    |               |- has a -> SIMPL_Rule                            | |-> associates the rule with a the floor shape
+    |                               |                                 |     (this has to happen for the program to run
+    |                               |-> writes a -> rule.cga file     |     even if the generator will use a different
+    |                                                   |             |     rule.cga)
+    |                                                   |             |
+    |                                                   |             |-> uses a -> <asset_name>.obj
+    |                                                   |             |              (this is the 3d object/CAD model
+    |                                                   |             |               used in the scene)
+    |                                                   |             |
+    |                                                   |_____________|-> uses a -> <asset_material>.jpg
+    |                                                                                (this is the 'paint job' for
+    |                                                                                 the asset)
+    |
+    |- has a -> SIMPL_Generator (manages the script.py file)
+                    |
+                    |-> modifies scene conditions (lighting, camera angles, asset placement, etc) and takes pictures
+                    |
+                    |- uses a -> rule.cga from the rules/SIMPL_rules directory
+                    |- uses a -> scene.cej from the scenes/SIMPL_scenes directory
+                    |- uses a -> camera.fbx from the data/ directory
+                    |
+                    |- outputs -> the color images and the truth annotations images to the images/SIMPL_images/ dir
+                    |- outputs -> the truth jsons to the images/SIMPL_images/truth_jsons directory
