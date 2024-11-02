@@ -1,4 +1,4 @@
-SIMPL_script makes an instance of
+CityEngine/scripts/SIMPL.py makes an instance of
     |
     V
   SIMPL_Image
