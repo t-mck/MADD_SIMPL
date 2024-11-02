@@ -2,8 +2,7 @@ Steps:
 1. Download CityEngine
 2. Prepare assets (3D models) and put them into the assets directory
 3. Prepare Maps and put them into the maps directory
-4. Make minimal updates and run (via F9 hot key in CityEngine) SIMPL.py to generate data
-   These updates consist of indicating the asset files, and map files to use for making images
+4. Make minimal updates and run (via F9 hot key in CityEngine) SIMPL.py to generate data. These updates consist of indicating the asset files, and map files to use for making images.
 
 At this point all data and ground truth annotations are complete
 
