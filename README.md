@@ -1,4 +1,6 @@
-This repository is a fork/extension of this previous project: https://github.com/yangxu351/synthetic_xview_airplanes/
+This repository is a fork/extension of this previous project: 
+
+https://github.com/yangxu351/synthetic_xview_airplanes/
 
 and this paper
 
