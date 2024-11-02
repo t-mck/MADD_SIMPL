@@ -1,4 +1,4 @@
-Steps:
+Steps (this reduces the orginal steps significantly by elimnating the need to build: a CityEngine scene, ie. a .cej file; a CityEngine rules flie, ie. a .cga file; and a python script):
 1. Download CityEngine
 2. Prepare assets (3D models) and put them into the assets directory
 3. Prepare Maps and put them into the maps directory
