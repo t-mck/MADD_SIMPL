@@ -1,10 +1,10 @@
-Steps (this reduces the orginal steps significantly by elimnating the need to build: a CityEngine scene, ie. a .cej file; a CityEngine rules flie, ie. a .cga file; and a python script):
+Steps:
 1. Download CityEngine
 2. Prepare assets (3D models) and put them into the assets directory
 3. Prepare Maps and put them into the maps directory
 4. Make minimal updates and run (via F9 hot key in CityEngine) SIMPL.py to generate data. These updates consist of indicating the asset files, and map files to use for making images.
 
-At this point all data and ground truth annotations are complete
+At this point all data and ground truth annotations are complete. This reduces the orginal steps significantly by elimnating the need to build: a CityEngine scene, ie. a .cej file; a CityEngine rules flie, ie. a .cga file; and a python script.
 
 New steps
 1. Truth datastrucutre. If a YAML dataset is desired, run the SIMPL_TruthYAML.py file, and it will create a complete YAML file from the generated data. This file converts the ground truth annotation files to bounding boxes (0 to 1 object x,y center, and 0 to 1 object height) for each detection found in an image.
