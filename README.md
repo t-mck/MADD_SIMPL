@@ -11,7 +11,7 @@ New steps
 2. Object Detector. If an object detector is desired, a base YOLO11 detector script is avaible in SIMPL_synthetic_detector.py. This can be used to build a detector from a .yaml file.
 
 Blender Support
-1. If your 3d assets exist in blender and you need to rotate them, or rotate part of them, our program SIMPL_blender_object_rotater.py can simplify and automate this process, and prepare .obj files that are compatible with CityEngine.
+1. Asset part rotation. If your 3d assets exist in blender and you need to rotate them, or rotate part of them, our program SIMPL_blender_object_rotater.py can simplify and automate this process, and prepare .obj files that are compatible with CityEngine.
 
 -break-
 
